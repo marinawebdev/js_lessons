@@ -26,7 +26,9 @@ for ( let i = 0; i < 2; i++ ) {
 	};
 };
 
-/*while ( i < 2 ) {
+/*
+let i = 0;
+while ( i < 2 ) {
 	let a = prompt("Введите обязательную статью расходов в этом месяце", ""),
 		b = prompt("Во сколько обойдется?", "");
 
@@ -34,31 +36,32 @@ for ( let i = 0; i < 2; i++ ) {
 		&& (typeof(b)) != null && a != "" && b != "" && a.length < 50 ) {
 		console.log('done');
 		appData.expenses[a] = b;
-		i++;
 	} else {
 		console.log('bad result');
 		i--;
 	};
+	i++;
 };
 
+let i = 0;
 do {
 	let a = prompt("Введите обязательную статью расходов в этом месяце", ""),
 		b = prompt("Во сколько обойдется?", "");
-		
+
 	if ( (typeof(a)) === "string" && (typeof(a)) != null 
 		&& (typeof(b)) != null && a != "" && b != "" && a.length < 50 ) {
 		console.log('done');
 		appData.expenses[a] = b;
-		i++;
 	} else {
 		console.log('bad result');
 		i--;
 	};
+	i++;
 } while ( i < 2 );*/
 
 appData.moneyPerDay = appData.budget / 30;
 
-alert( "Ежедневный бюджет составит: " + appData.moneyPerDay );
+alert( "Ежедневный бюджет составит: " + appData.moneyPerDay + " грн." );
 
 if ( appData.moneyPerDay < 100 ) {
 	console.log( "Минимальный уровень дохода" );
